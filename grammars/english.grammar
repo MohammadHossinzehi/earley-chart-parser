@@ -1,0 +1,9 @@
+# The textbook PP-attachment ambiguity.
+S   -> NP VP
+NP  -> Det N | NP PP | "I"
+VP  -> V NP | VP PP
+PP  -> P NP
+Det -> "the" | "a"
+N   -> "man" | "telescope" | "park" | "dog" | "hill"
+V   -> "saw" | "walked"
+P   -> "with" | "in" | "on"
