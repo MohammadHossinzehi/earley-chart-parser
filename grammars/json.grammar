@@ -1,0 +1,6 @@
+# JSON, written with EBNF sugar (?, *, groups).
+value  -> object | array | STRING | number | "true" | "false" | "null"
+number -> "-"? NUMBER
+object -> "{" (pair ("," pair)*)? "}"
+pair   -> STRING ":" value
+array  -> "[" (value ("," value)*)? "]"
