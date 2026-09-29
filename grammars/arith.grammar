@@ -1,0 +1,7 @@
+# Arithmetic with the usual precedence. Left recursion is fine for Earley.
+expr   -> expr "+" term | expr "-" term | term
+term   -> term "*" power | term "/" power | power
+power  -> unary "^" power | unary          # right associative
+unary  -> "-" unary | atom
+atom   -> NUMBER | "(" expr ")" | NAME "(" args? ")"
+args   -> expr ("," expr)*
